@@ -30,44 +30,60 @@ class MainActivity : AppCompatActivity() {
             val numbOne = etNumbOne.text.toString()
             val numbTwo = etNumbTwo.text.toString()
 
-            if (numbOne.isBlank() || numbTwo.isBlank()){
+            if (numbOne.isBlank()){
                 etNumbOne.error = "Number is required"
                 return@setOnClickListener
             }
-            addition(etNumbOne.toString().toDouble(), etNumbTwo.toString().toDouble())
+            if (numbTwo.isBlank()){
+                etNumbTwo.error = "Number is required"
+                return@setOnClickListener
+            }
+            addition(numbOne.toDouble(),numbTwo.toDouble())
         }
         btnSubtract.setOnClickListener {
             tvResult.text = ""
             val numbOne = etNumbOne.text.toString()
             val numbTwo = etNumbTwo.text.toString()
 
-            if (numbOne.isBlank() || numbTwo.isBlank()){
+            if (numbOne.isBlank()){
                 etNumbOne.error = "Number is required"
                 return@setOnClickListener
             }
-            subtraction(etNumbOne.toString().toDouble(), etNumbTwo.toString().toDouble())
+            if (numbTwo.isBlank()){
+                etNumbTwo.error = "Number is required"
+                return@setOnClickListener
+            }
+            subtraction(numbOne.toDouble(),numbTwo.toDouble())
         }
         btnMultiply.setOnClickListener {
             tvResult.text = ""
             val numbOne = etNumbOne.text.toString()
             val numbTwo = etNumbTwo.text.toString()
 
-            if (numbOne.isBlank() || numbTwo.isBlank()){
+            if (numbOne.isBlank()){
                 etNumbOne.error = "Number is required"
                 return@setOnClickListener
             }
-            multiplication(etNumbOne.toString().toDouble(), etNumbTwo.toString().toDouble())
+            if (numbTwo.isBlank()){
+                etNumbTwo.error = "Number is required"
+                return@setOnClickListener
+            }
+            multiplication(numbOne.toDouble(),numbTwo.toDouble())
         }
         btnModulus.setOnClickListener {
             tvResult.text = ""
             val numbOne = etNumbOne.text.toString()
             val numbTwo = etNumbTwo.text.toString()
 
-            if (numbOne.isBlank() || numbTwo.isBlank()){
+            if (numbOne.isBlank()){
                 etNumbOne.error = "Number is required"
                 return@setOnClickListener
             }
-            modulus(etNumbOne.toString().toDouble(), etNumbTwo.toString().toDouble())
+            if (numbTwo.isBlank()){
+                etNumbTwo.error = "Number is required"
+                return@setOnClickListener
+            }
+            modulus(numbOne.toDouble(),numbTwo.toDouble())
         }
     }
     fun addition(etNumbOne: Double, etNumbTwo:Double){
